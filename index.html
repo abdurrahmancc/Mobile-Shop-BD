@@ -23,7 +23,7 @@
             id="inputField"
             type="text"
             class="form-control py-2"
-            placeholder="Enter your phone name"
+            placeholder="Enter your product name"
             aria-label="Recipient's username"
             aria-describedby="button-addon2"
           />
@@ -36,7 +36,22 @@
             Search
           </button>
         </div>
-        <p id="no-found" style="display: none" class="text-center">no result found</p>
+        <div>
+          <div
+            style="display: none"
+            id="spinner"
+            class="spinner-border text-primary mx-auto"
+            role="status"
+          ></div>
+          <p class="text-center text-danger" style="display: none" id="no-found">
+            No results found <span id="displaySearch"></span>
+          </p>
+          <p class="text-center text-danger" style="display: none" id="re-submit">
+            Please, write a product name.
+          </p>
+        </div>
+
+        <!-- <p id="no-found" style="display: none" class="text-center">no result found</p> -->
       </div>
     </section>
     <!-- phone more details -->
@@ -44,7 +59,7 @@
       <div id="phoneDetails" class="my-5 mx-auto shadow-sm"></div>
     </section>
     <!-- search result -->
-    <section class="container">
+    <section id="toggle" class="container">
       <div id="search-result" class="row row-cols-1 row-cols-md-3 g-4"></div>
     </section>
     <script

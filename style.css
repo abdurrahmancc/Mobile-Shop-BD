@@ -1,3 +1,6 @@
 .bg-color{
     background-color: #fcf5eeb6;
 }
+.card-border{
+    border-radius: 50px;
+}
