@@ -34,7 +34,7 @@ const toggleSpinner = (load) => {
 };
 // error handle function end
 
-// display all phone
+// display all product
 const displayPhones = (phones) => {
   if (phones.length == 0) {
     spinner("none");
