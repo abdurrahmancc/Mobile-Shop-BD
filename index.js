@@ -49,10 +49,12 @@ const displayPhones = (phones) => {
     div.innerHTML = `
       <div class="card p-2 rounded-3">
         <img src="${phone.image}" class="card-img-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title">${phone.phone_name}</h5>
-          <p class="card-text">${phone.brand}</p>
-          <button onclick = "moreDetails('${phone.slug}')" class="text-white text-decoration-none py-1 px-3 rounded bg-primary">Details</button>
+        <div class="card-body ">
+          <h5 class="card-title text-center">${phone.phone_name}</h5>
+          <p class="card-text text-center">${phone.brand}</p>
+          <div class="d-flex justify-content-center">
+            <button onclick = "moreDetails('${phone.slug}')" class="text-white text-decoration-none border-0 py-2 px-3 rounded bg-primary">View details</button>
+          </div>
         </div>
       </div>`;
     searchResult.appendChild(div);
@@ -74,6 +76,7 @@ const moreDetails = (phoneSlug) => {
 // display phone Details
 const phoneDetails = (phone) => {
   const phoneDetails = document.getElementById("phoneDetails");
+  phoneDetails.textContent = "";
   const div = document.createElement("div");
   div.innerHTML = `        
   <div class="card mb-3">
