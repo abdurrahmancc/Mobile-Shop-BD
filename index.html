@@ -16,53 +16,61 @@
     <title>Assignment project</title>
   </head>
   <body class="bg-color">
-    <!-- header part -->
-    <section class="container py-5">
-      <h1 class="text-primary text-center py-3 fw-bold">Mobile Shop BD</h1>
-      <div>
-        <!-- input group -->
-        <div class="input-group mx-auto mb-3 w-50">
-          <input
-            id="inputField"
-            type="text"
-            class="form-control py-2"
-            placeholder="Enter your product name"
-            aria-label="Recipient's username"
-            aria-describedby="button-addon2"
-          />
-          <button
-            onclick="loadPhone()"
-            class="btn btn-outline-secondary bg-primary text-white"
-            type="button"
-            id="search-btn"
-          >
-            Search
-          </button>
-        </div>
+    <main style="margin-bottom: 100px">
+      <!-- header part -->
+      <section class="container py-5">
+        <h1 class="text-primary text-center py-3 fw-bold">Mobile Shop BD</h1>
         <div>
-          <div
-            style="display: none"
-            id="spinner"
-            class="spinner-border text-primary mx-auto"
-            role="status"
-          ></div>
-          <p class="text-center text-danger" style="display: none" id="no-found">
-            No results found <span id="displaySearch"></span>
-          </p>
-          <p class="text-center text-danger" style="display: none" id="re-submit">
-            Please, write a product name.
-          </p>
+          <!-- input group -->
+          <div class="input-group mx-auto mb-3 w-50">
+            <input
+              id="inputField"
+              type="text"
+              class="form-control py-2"
+              placeholder="Enter your product name"
+              aria-label="Recipient's username"
+              aria-describedby="button-addon2"
+            />
+            <button
+              onclick="loadPhone()"
+              class="btn btn-outline-secondary bg-primary text-white"
+              type="button"
+              id="search-btn"
+            >
+              Search
+            </button>
+          </div>
+          <div>
+            <div
+              style="display: none"
+              id="spinner"
+              class="spinner-border text-primary mx-auto"
+              role="status"
+            ></div>
+            <p class="text-center text-danger" style="display: none" id="no-found">
+              No results found <span id="displaySearch"></span>
+            </p>
+            <p class="text-center text-danger" style="display: none" id="re-submit">
+              Please, write a product name.
+            </p>
+          </div>
         </div>
+      </section>
+      <!-- phone more details -->
+      <section class="container">
+        <div id="phoneDetails" class="my-5 mx-auto shadow-sm"></div>
+      </section>
+      <!-- search result -->
+      <section id="toggle" class="container">
+        <div id="search-result" class="row row-cols-1 row-cols-md-3 g-5"></div>
+      </section>
+    </main>
+    <!-- footer section -->
+    <footer>
+      <div style="background-color: #2827cc" class="py-4 fixed-bottom text-center text-white">
+        <span class="">Copyright &copy; Abdur Rahman 2022</span>
       </div>
-    </section>
-    <!-- phone more details -->
-    <section class="container">
-      <div id="phoneDetails" class="my-5 mx-auto shadow-sm"></div>
-    </section>
-    <!-- search result -->
-    <section id="toggle" class="container">
-      <div id="search-result" class="row row-cols-1 row-cols-md-3 g-4"></div>
-    </section>
+    </footer>
     <!-- java script -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

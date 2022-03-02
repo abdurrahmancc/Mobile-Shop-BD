@@ -12,7 +12,7 @@ const loadPhone = () => {
     const url = `https://openapi.programming-hero.com/api/phones?search=${inputText}`;
     fetch(url)
       .then((response) => response.json())
-      .then((data) => displayPhones(data.data.slice(0, 20)));
+      .then((data) => displayPhones(data.data));
     spinner("block");
     toggleSpinner("none");
     toggleNoResult("none");
@@ -41,14 +41,17 @@ const displayPhones = (phones) => {
     toggleNoResult("block");
     againResult("none");
   }
+
+  const allPhone = phones.slice(0, 20);
+  // console.log(allPhone);
   const searchResult = document.getElementById("search-result");
   searchResult.textContent = "";
-  phones?.forEach((phone) => {
+  allPhone?.forEach((phone) => {
     const div = document.createElement("div");
     div.classList.add("col");
     div.innerHTML = `
       <div class="card p-2 rounded-3">
-        <img src="${phone.image}" class="card-img-top" alt="..." />
+        <img src="${phone.image}" class="card-img-top w-75 pt-4 mx-auto img-fluid" alt="..." />
         <div class="card-body ">
           <h5 class="card-title text-center">${phone.phone_name}</h5>
           <p class="card-text text-center">${phone.brand}</p>
